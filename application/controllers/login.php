@@ -7,6 +7,7 @@ class Login extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view("v_login");
+        $data["title"] ="Login";
+        $this->load->view("v_login",$data);
     }
 }

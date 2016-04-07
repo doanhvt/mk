@@ -4,7 +4,7 @@ class Home extends CI_Controller{
         parent::__construct();
     }
     public function index(){
-        $data['title'] = "Welcome to admin page !";
+        $data['title'] = "ADMIN";
         $this->load->view('v_home',$data);
     }
 }
