@@ -27,6 +27,7 @@
         </style>
     </head>
     <body style="text-align:center;font-family:arial;">
+        <h1><a href="<?php echo site_url("home"); ?>">==> Go back home <==</a></h1>
         <h1><?php echo $title; ?></h1>
         <table align="center" border="1" style="width:70%">
             <tr>

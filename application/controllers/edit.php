@@ -25,7 +25,7 @@ class Edit extends CI_Controller {
         $config = array();
         $config["base_url"] = base_url("edit/page");
         $config["total_rows"] = count($this->m_view->get_list_account());
-        $config["per_page"] = 2;
+        $config["per_page"] = 6;
         $config["uri_segment"] = 3;
         $config['num_tag_open'] = '<div style="background-color:#EEEEE;width:30px;height:30px;display:inline-block;color:white;margin:1px;border-radius:3px 3px 3px 3px;border:1px solid #EEEEEE">';
         $config['num_tag_close'] = '</div>';
