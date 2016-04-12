@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title><?php echo $title; ?></title>
+        <title><?php echo $title;?></title>
         <style>
             *{
                 margin: 0;
@@ -14,25 +14,18 @@
     </head>
     <body style="background-color: #E9EAED;font-family: arial;">
         <h1 style="color:blue;text-align: center;font-family: arial;margin-top: 70px;margin-bottom: 90px;"><?php echo $title; ?></h1>
-        <div style="width:800px;height: 508px;margin: 0 auto;">
-            <div>
-                <div class="grow" style="width: 396px;height: 250px;float:left;background-color: blue;text-align: center;border: 2px solid white;border-radius: 15px;">
-                    <a href="<?php echo site_url("view"); ?>" style="line-height: 250px;font-size: 40px;color: white;text-decoration: none;">VIEW</a>
-                </div>
-                <div class="grow" style="width: 396px;height: 250px;float:left;background-color: grey;text-align: center;border: 2px solid white;border-radius: 15px;">
-                    <a href="<?php echo site_url("add");?>" style="line-height: 250px;font-size: 40px;color: white;text-decoration: none;">ADD</a>
-                </div>
-                <div style="clear: both;"></div>
-            </div>
-            <div>
-                <div class="grow" style="width: 396px;height: 250px;float:left;background-color: green;text-align: center;border: 2px solid white;border-radius: 15px;">
-                    <a href="<?php echo site_url("edit"); ?>" style="line-height: 250px;font-size: 40px;color: white;text-decoration: none;">EDIT</a>
-                </div>
-                <div class="grow" style="width: 396px;height: 250px;float:left;background-color: yellowgreen;text-align: center;border: 2px solid white;border-radius: 15px;">
-                    <a href="<?php echo site_url("delete"); ?>" style="line-height: 250px;font-size: 40px;color: white;text-decoration: none;">DELETE</a>
-                </div>
-                <div style="clear: both;"></div>
-            </div>
+        <div style="width:300px; margin:0 auto;">
+            <?php
+            if ($list_permission) {
+                foreach ($list_permission as $item){
+                    ?>
+                    <div class="grow" style="background-color:green;height: 100px;margin-top: 10px;text-align: center;border-radius: 10px 10px 10px 10px">
+                        <a style="line-height: 100px;text-decoration: none;color:white;font-size:30px;" href="<?php echo site_url($item); ?>"><?php echo $item;?></a>
+                    </div>             
+                    <?php
+                }
+            }
+            ?>
         </div>
     </body>
 </html>
